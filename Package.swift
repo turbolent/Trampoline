@@ -1,10 +1,21 @@
-// swift-tools-version:3.1
+// swift-tools-version:4.2
 
 import PackageDescription
 
 let package = Package(
     name: "Trampoline",
+    products: [
+        .library(
+            name: "Trampoline",
+            targets: ["Trampoline"]
+        )
+    ],
     targets: [
-        Target(name: "Trampoline")
+        .target(name: "Trampoline"),
+        .testTarget(
+            name: "TrampolineTests",
+            dependencies: ["Trampoline"]
+        )
     ]
 )
+
