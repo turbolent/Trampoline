@@ -98,12 +98,4 @@ class TrampolineTests: XCTestCase {
         XCTAssertEqual(ackermann(3, 7).run(), 1021)
     }
 
-    static var allTests = [
-        ("testFlatMap", testFlatMap),
-        ("testFlatMap2", testFlatMap2),
-        ("testFlatMap3", testFlatMap3),
-        ("testMap", testMap),
-        ("testMap2", testMap2),
-        ("testEvenOdd", testEvenOdd),
-    ]
 }

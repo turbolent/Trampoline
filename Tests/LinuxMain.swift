@@ -1,6 +1,8 @@
 import XCTest
-@testable import TrampolineTests
 
-XCTMain([
-    testCase(TrampolineTests.allTests),
-])
+import TrampolineTests
+
+var tests = [XCTestCaseEntry]()
+tests += TrampolineTests.__allTests()
+
+XCTMain(tests)
