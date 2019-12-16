@@ -1,14 +1,14 @@
 language: generic
 env:
   global:
-    - SWIFT_BRANCH=swift-5.0-release
-    - SWIFT_VERSION=swift-5.0-RELEASE
+    - SWIFT_BRANCH=swift-5.1.3-release
+    - SWIFT_VERSION=swift-5.1.3-RELEASE
 matrix:
   include:
     - script: swift package update && swift test
       os: osx
-      osx_image: xcode10.2
-    - script: swift package update && swift test
+      osx_image: xcode11.3
+    - script: swift package update && swift test --enable-test-discovery
       os: linux
       sudo: required
       dist: xenial
